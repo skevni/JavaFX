@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.geekbrains.javacore2.sklyarov.javafx.Controller">
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+<!--            <MenuBar VBox.vgrow="NEVER">-->
+<!--                <menus>-->
+<!--                    <Menu text="File">-->
+<!--                        <items>-->
+<!--                            <MenuItem text="Add"/>-->
+<!--                        </items>-->
+<!--                    </Menu>-->
+<!--                </menus>-->
+<!--            </MenuBar>-->
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+
+            <TextArea fx:id="chatBox" editable="false" focusTraversable="false" VBox.vgrow="ALWAYS">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </TextArea>
+            <HBox spacing="5">
+                <TextField fx:id="messageField" onAction="#sendMessage" promptText="Type a message" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Button onAction="#sendMessage" text="Send" />
+                <VBox.margin>
+                    <Insets top="10" />
+                </VBox.margin>
+            </HBox>
+        </VBox>
+</GridPane>
